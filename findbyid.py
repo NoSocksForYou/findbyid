@@ -10,7 +10,7 @@ class FindByIDFactory:
         cls = type(self)
         if not hasattr(cls, "has_instantiated_before"):
             cls.instances = []
-            cls.has_instantiated = True
+            cls.has_instantiated_before = True
 
         self.ID = cls.__getFreeID()
         cls.instances.append(self)
